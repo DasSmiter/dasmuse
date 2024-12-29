@@ -12,6 +12,6 @@ RUN curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --de
     # Add this repo to your apt repositories
 RUN echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
     # Install
-RUN sudo apt-get update && sudo apt-get install cloudflare-warp
+RUN sudo apt-get update && sudo apt-get -y install cloudflare-warp
 
 CMD ["/lib/systemd/systemd", "--system", "--unit=basic.target"]
