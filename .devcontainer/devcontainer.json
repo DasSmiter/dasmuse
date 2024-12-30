@@ -1,8 +1,0 @@
-{
-	"name": "Ubuntu w/systemd",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"overrideCommand": false,
-	"privileged": true
-}
